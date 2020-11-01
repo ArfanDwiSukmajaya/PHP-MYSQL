@@ -122,7 +122,7 @@
     }else{
       $foto = upload();
     }
-     
+
 
     // Query insert data in
     $sql = "UPDATE mahasiswa SET
