@@ -1,5 +1,14 @@
 <?php 
+
+  session_start();
+
+  if (!isset($_SESSION["login"])){
+    header("Location:login.php");
+    exit;
+  }
+
   include 'functions.php';
+  // include 'login.php';
   $mahasiswa = query("SELECT * FROM mahasiswa ORDER BY id ASC");  
 
   if (isset($_POST["cari"])){
@@ -15,6 +24,7 @@
   <title>CRUD PHP</title>
 </head>
 <body>
+  <a href="logout.php">Logout</a>
   <header>
     <h1>Selamat Datang</h1>
   </header>

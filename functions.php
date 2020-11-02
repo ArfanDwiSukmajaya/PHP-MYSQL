@@ -17,7 +17,8 @@
     }
     return $rows;
   }
-	
+  
+  
 	function tambah($data){
 		global $conn;
 		$nobp = htmlspecialchars($data["nobp"]);
@@ -48,7 +49,6 @@
     $ukuranFile = $_FILES['foto']['size'];
     $error = $_FILES['foto']['error'];
     $tmpName = $_FILES['foto']['tmp_name'];
-
 
     // Cek apakah tidak ada gambar yg d uoload
     if($error == 4){
@@ -84,7 +84,6 @@
       return false;
     }
 
-
     // Lolos pengecekan gambar siap di upload
     // generate nama gambar baru
     $namaFileBaru = uniqid();
@@ -94,7 +93,6 @@
     move_uploaded_file($tmpName, 'img/' . $namaFileBaru);
 
     return $namaFileBaru;
-
 
   }
 
@@ -122,7 +120,6 @@
     }else{
       $foto = upload();
     }
-
 
     // Query insert data in
     $sql = "UPDATE mahasiswa SET
@@ -156,11 +153,8 @@
     $password = mysqli_real_escape_string($conn, $data["password"]);
     $password2 = mysqli_real_escape_string($conn, $data["password2"]);
 
-
     // Cek username udah ad atau belum
     $result = mysqli_query($conn, "SELECT username FROM user WHERE username = '$username'");
-
-
 
     if(mysqli_fetch_assoc($result)){
       echo"

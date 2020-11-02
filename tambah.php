@@ -1,4 +1,11 @@
 <?php
+  session_start();
+
+  if (!isset($_SESSION["login"])){
+    header("Location:login.php");
+    exit;
+  }
+
   include 'functions.php';
 
   // Cek apakh tombol submit udah ditekan atau belum
