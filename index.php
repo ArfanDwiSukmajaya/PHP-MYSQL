@@ -26,7 +26,7 @@
 <body>
   <a href="logout.php">Logout</a>
   <header>
-    <h1>Selamat Datang</h1>
+    <h1>Selamat Datang <?= $_SESSION["username"]; ?></h1>
   </header>
   <a href="tambah.php">Tambah Data Mahasiswa</a>
   <br>

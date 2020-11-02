@@ -5,7 +5,7 @@
     header("Location:index.php");
     exit;
   }
-  
+
   include 'functions.php';
 
   if(isset($_POST["login"])){
@@ -18,6 +18,7 @@
     if(mysqli_num_rows($result) === 1){
       // Cek passwordnya
       $row = mysqli_fetch_assoc($result);
+      $_SESSION["username"] = $row["username"];
       if(password_verify($password, $row['password'])){
         // Set session
         $_SESSION["login"] = true;
