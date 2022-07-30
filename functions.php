@@ -19,7 +19,7 @@
   }
   
   
-    function tambah($data){
+  function tambah($data){
     global $conn;
     $nobp = htmlspecialchars($data["nobp"]);
     $nama = htmlspecialchars($data["nama"]);
