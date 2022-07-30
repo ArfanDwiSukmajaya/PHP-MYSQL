@@ -19,9 +19,9 @@
   }
   
   
-	function tambah($data){
-		global $conn;
-		$nobp = htmlspecialchars($data["nobp"]);
+    function tambah($data){
+    global $conn;
+    $nobp = htmlspecialchars($data["nobp"]);
     $nama = htmlspecialchars($data["nama"]);
     $email = htmlspecialchars($data["email"]);
     // $foto = htmlspecialchars($data["foto"]);
